@@ -1,3 +1,6 @@
 Estoy verificando lo que voy a necesitar para solucionar el prblema.
 -Me di cuenta de que las trayectorias de las balas se ven afectadas bajo las ecuaciones de MRU, MRUA.
-- El cañon defensivo destruye los proyectiles que se encuentren dentro del radio de 0.025d
+- El cañon defensivo destruye los proyectiles que se encuentren dentro del radio de 0.025d y que solo vayan a destruir el cañon
+-El cañon ofensivo tiene un senosr de detonación que detecta la ubicación enemiga dentro de una distancia de 0,05d.
+-La bala del cañon ofensivo destruye todo lo que se encuentre dentro de un circulo con centro (xo,yo) y un radio de 0,05d
+-Tengo que solucionar una simulación que me reciba la información de el disparo ofensivo y calcular los parametros para un disparo defensivo efectivo
