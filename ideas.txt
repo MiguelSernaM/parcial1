@@ -1,1 +1,3 @@
-Estoy verificando lo que voy a necesitar para solucionar el prblema
+Estoy verificando lo que voy a necesitar para solucionar el prblema.
+-Me di cuenta de que las trayectorias de las balas se ven afectadas bajo las ecuaciones de MRU, MRUA.
+- El cañon defensivo destruye los proyectiles que se encuentren dentro del radio de 0.025d
