@@ -2,12 +2,19 @@
 #include <math.h>
 #include <cstdlib>
 using namespace std;
-
+#define PI 3.14159265
+bool impacto(int,int,int,int,int);
+int trayectoriax(int,int,int,int,float);
 int main()
 {
-    int d,xd,yd,xa=0,ya=0,opc;
+    int d,xd,yd,xa=0,ya=0,opc,angulo;
+    float gravedad=9.81;
     return 0;
-    d = rand()%1000;
+    d = 700;
+    angulo = 50*PI/180;
+    int impact = 0.05*d;
+    xd = d;
+    yd = rand()%100;
     cout<<"1-Generar disparos (al menos tres) ofensivos que comprometan la integridad del cañón defensivo."<<endl;
     cout<<"2. Generar disparos (al menos tres) defensivos que comprometan la integridad del cañón ofensivo."<<endl;
     cout<<"3. Dado un disparo ofensivo, generar (al menos tres) disparos defensivos que impida que el cañón";
@@ -32,4 +39,30 @@ case 4:{
  //-----------------
     }
     
+    
+}
+int trayectoriax(int xd,int yd,int impact,int angulo,float gravedad){
+    int vx0,vy0,t=0;
+    for(int v00=0; v00<1000;v00++){
+        vx0 = v00*cos(angulo);
+        vy0 = v00*sin(angulo);
+        for(;t<1000;t++){
+            vx0=vx0*t;
+            vy0=vy0*t-((t*t*gravedad)/2);
+            if(impacto(xd,yd,vx0,vy0) == true){
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+bool impacto(int xo,int yo,int xd,int yd,int impact){
+    int dist;
+    dist =pow(pow(xo-xd,2)+pow(yo-yd,2),0.5);
+    if(dist <= impact){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
