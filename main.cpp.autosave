@@ -1,10 +1,35 @@
 #include <iostream>
-
+#include <math.h>
+#include <cstdlib>
 using namespace std;
-int detectarbala();
-int 
+
 int main()
 {
-    
+    int d,xd,yd,xa=0,ya=0,opc;
     return 0;
+    d = rand()%1000;
+    cout<<"1-Generar disparos (al menos tres) ofensivos que comprometan la integridad del cañón defensivo."<<endl;
+    cout<<"2. Generar disparos (al menos tres) defensivos que comprometan la integridad del cañón ofensivo."<<endl;
+    cout<<"3. Dado un disparo ofensivo, generar (al menos tres) disparos defensivos que impida que el cañón";
+    cout<<"defensivo sea destruido sin importar si el cañón ofensivo pueda ser destruido"<<endl;
+    cout<<"4. Dado un disparo ofensivo, generar (al emnos tres) disparo defensivos que impidan que los cañones defensivo y ofensivo puedan ser destruidos."<<endl;
+    cout<<endl;
+    cout<<"¿Que desea hacer?"<<endl;
+    cin>>opc;
+    switch(opc){
+    
+case 1:{
+        
+    
+    
+    }
+case 2:{
+    }
+case 3:{
+    }
+case 4:{
+    }
+ //-----------------
+    }
+    
 }
